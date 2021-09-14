@@ -1,16 +1,22 @@
 <template>
-  <div id="app">
-    <HomePage msg="Welcome to Your Vue.js App"/>
+  <div>
+    <base-header />
+    <HomePage />
+    <base-footer id="footer"/>
   </div>
 </template>
 
 <script>
 import HomePage from './pages/HomePage.vue';
+import BaseHeader from './components/BaseHeader.vue';
+import BaseFooter from './components/BaseFooter.vue';
 
 export default {
   name: 'App',
   components: {
-    HomePage
+    HomePage,
+    'base-header': BaseHeader,
+    'base-footer' : BaseFooter
   }
 }
 </script>
@@ -23,5 +29,11 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  
 }
 </style>
