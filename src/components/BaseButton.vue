@@ -4,7 +4,7 @@
         <slot></slot>
     </b-button>
     
-    <b-button v-else class ="disabled"  variant="success">
+    <b-button v-else variant="success" disabled>
         <slot></slot>
     </b-button>
 
@@ -20,7 +20,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.disabled{
-    background-color:rgb(112, 112, 112);
-}
+
 </style>
