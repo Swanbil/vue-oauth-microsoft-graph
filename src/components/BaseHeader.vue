@@ -7,22 +7,24 @@
         </base-button>
     </h3>
     <h3 class="ms-auto p-2">
-      <base-button :disable="false" :color="'success'">
+      <async-button :disable="false" :color="'success'" >
         <b-icon icon="person-circle" aria-hidden="true"></b-icon>
         Username
-      </base-button>
+      </async-button>
     </h3>
         
   </div>
 </template>
 
 <script>
+import AsyncButtonVue from './AsyncButton.vue'
 import BaseButton from './BaseButton.vue'
 
 export default {
   name: 'BaseHeader',
   components: {
-    'base-button' : BaseButton
+    'base-button' : BaseButton,
+    'async-button' : AsyncButtonVue
   }
 }
 </script>

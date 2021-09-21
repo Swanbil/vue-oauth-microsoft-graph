@@ -1,6 +1,6 @@
 <template>
   <div class="button">
-    <b-button v-if="!this.disable" :variant="this.color">
+    <b-button v-if="!this.disable" :variant="this.color" @click="this.onClick">
         <slot></slot>
     </b-button>
     
@@ -14,7 +14,7 @@
 <script>
 export default {
   name: "BaseButton",
-  props: ['disable','color']
+  props: ['disable','color','onClick']
 };
 </script>
 
