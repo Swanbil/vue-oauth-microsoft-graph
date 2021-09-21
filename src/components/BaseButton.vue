@@ -1,10 +1,10 @@
 <template>
   <div class="button">
-    <b-button v-if="!this.disable" variant="success">
+    <b-button v-if="!this.disable" :variant="this.color">
         <slot></slot>
     </b-button>
     
-    <b-button v-else variant="success" disabled>
+    <b-button v-else :variant="this.color" disabled>
         <slot></slot>
     </b-button>
 
@@ -14,7 +14,7 @@
 <script>
 export default {
   name: "BaseButton",
-  props: ['disable']
+  props: ['disable','color']
 };
 </script>
 
